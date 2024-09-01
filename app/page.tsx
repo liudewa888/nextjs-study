@@ -1,14 +1,9 @@
-import LikeButton from "./like-button";
-
-function Header() {
-  return <h1>header</h1>;
-}
+import Chat from "./chat";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <LikeButton></LikeButton>
+    <div className="flex justify-center w-[100vw]">
+      <Chat />
     </div>
   );
 }
