@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, createContext, useContext } from "react";
+import { useState, createContext, useContext, useRef } from "react";
 // const msgData = [
 //   { type: 1, msg: "my msg", uname: "xxx" },
 //   { type: 2, msg: "other msg", uname: "xxx" },
@@ -51,14 +51,22 @@ function Send() {
   function inputChange(event) {
     setInputVal(event.target.value);
   }
+
+  function inputKeyDown(event) {
+    if (!event.shiftKey && event.keyCode == 13) {
+      sendMsg();
+      event.preventDefault();
+    }
+  }
   return (
-    <div className="w-full h-12 flex items-center">
+    <div className="w-full h-12 flex items-center px-3">
       <input
         type="text"
         name="input"
         className="border border-[#ccc] h-10 w-[30%]"
         value={inputVal}
         onChange={inputChange}
+        onKeyDown={inputKeyDown}
       />
       <button className="ml-3" onClick={sendMsg}>
         发送
@@ -69,6 +77,12 @@ function Send() {
 
 function Msg() {
   const { msgData } = useContext(MsgContext);
+  const parentRef = useRef(null);
+  function copyText() {
+    console.log(parentRef, 999);
+
+    // navigator.clipboard.writeText("8888");
+  }
   return (
     <div className="flex-1">
       <ul className="flex flex-col overflow-auto h-[68vh] px-3">
@@ -81,9 +95,21 @@ function Msg() {
               key={index}
             >
               {item.type !== 1 && (
-                <span className="text-xs">{item.uname}:</span>
+                <span className="text-xs text-[#202020bb]">{item.uname}:</span>
               )}
-              <span>{item.msg}</span>
+              <div className="text-[#202020dd] flex items-center">
+                <span>{item.msg}</span>
+                {item.type !== 1 && (
+                  <div
+                    className="ml-2 text-xs text-[#007bff99] relative left-1 top-0"
+                    ref={parentRef}
+                  >
+                    <button onClick={copyText}>复制{index}</button>
+                    <button className="ml-2">打开</button>
+                    <button className="ml-2">下载</button>
+                  </div>
+                )}
+              </div>
             </li>
           );
         })}
