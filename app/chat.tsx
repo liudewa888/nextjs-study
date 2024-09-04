@@ -77,11 +77,12 @@ function Send() {
 
 function Msg() {
   const { msgData } = useContext(MsgContext);
-  const parentRef = useRef(null);
-  function copyText() {
-    console.log(parentRef, 999);
-
-    // navigator.clipboard.writeText("8888");
+  const parentRefs = useRef([]);
+  function copyText(index) {
+    const el = parentRefs.current[index]?.previousSibling;
+    if (el) {
+      navigator.clipboard.writeText(el.innerText);
+    }
   }
   return (
     <div className="flex-1">
@@ -102,9 +103,9 @@ function Msg() {
                 {item.type !== 1 && (
                   <div
                     className="ml-2 text-xs text-[#007bff99] relative left-1 top-0"
-                    ref={parentRef}
+                    ref={(el) => (parentRefs.current[index] = el)}
                   >
-                    <button onClick={copyText}>复制{index}</button>
+                    <button onClick={() => copyText(index)}>复制</button>
                     <button className="ml-2">打开</button>
                     <button className="ml-2">下载</button>
                   </div>
