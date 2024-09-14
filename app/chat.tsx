@@ -12,7 +12,10 @@ interface Msg {
   msg: string;
 }
 
-const MsgContext = createContext({ msgData: [] as Msg[] });
+const MsgContext = createContext<{
+  msgData: Msg[];
+  setMsgData: React.Dispatch<React.SetStateAction<Msg[]>>;
+}>({ msgData: [], setMsgData: () => {} });
 
 function Header() {
   return (
@@ -48,12 +51,12 @@ function Send() {
     setInputVal("");
   }
 
-  function inputChange(event) {
+  function inputChange(event: React.ChangeEvent<HTMLInputElement>) {
     setInputVal(event.target.value);
   }
 
-  function inputKeyDown(event) {
-    if (!event.shiftKey && event.keyCode == 13) {
+  function inputKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (!event.shiftKey && event.key === "Enter") {
       sendMsg();
       event.preventDefault();
     }
@@ -77,11 +80,21 @@ function Send() {
 
 function Msg() {
   const { msgData } = useContext(MsgContext);
-  const parentRefs = useRef([]);
-  function copyText(index) {
-    const el = parentRefs.current[index]?.previousSibling;
-    if (el) {
+  const parentRefs = useRef<(HTMLDivElement | null)[]>([]);
+  function copyText(index: number) {
+    const el = parentRefs.current[index]?.previousSibling as HTMLElement;
+    if (el && el.innerText) {
       navigator.clipboard.writeText(el.innerText);
+    }
+  }
+  function openLink(index: number) {
+    const el = parentRefs.current[index]?.previousSibling as HTMLElement;
+    if (el && el.innerText) {
+      const url = el.innerText;
+      const reg = /http[s]?:\/\//;
+      if (reg.test(url)) {
+        window.open(url, "_blank");
+      }
     }
   }
   return (
@@ -103,10 +116,14 @@ function Msg() {
                 {item.type !== 1 && (
                   <div
                     className="ml-2 text-xs text-[#007bff99] relative left-1 top-0"
-                    ref={(el) => (parentRefs.current[index] = el)}
+                    ref={(el) => {
+                      parentRefs.current[index] = el;
+                    }}
                   >
                     <button onClick={() => copyText(index)}>复制</button>
-                    <button className="ml-2">打开</button>
+                    <button className="ml-2" onClick={() => openLink(index)}>
+                      打开
+                    </button>
                     <button className="ml-2">下载</button>
                   </div>
                 )}
