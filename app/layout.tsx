@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "web chat",
-  description: "web chat",
+  title: "深圳周喜珠宝产业服务有限公司",
+  description: "深圳周喜珠宝产业服务有限公司",
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ fontSize: "8.25px" }}>
       <body className={inter.className}>{children}</body>
     </html>
   );
