@@ -346,7 +346,7 @@ export default function Home() {
     },
   ];
 
-  function getM(timestamp) {
+  function getM(timestamp: any) {
     const date = new Date(timestamp * 1000);
     const hours = date.getHours();
     const minutes = date.getMinutes();
@@ -437,7 +437,7 @@ export default function Home() {
                   <div className="text-base first-line:font-number space-x-2">
                     <span className="font-number">{item.chgVal}</span>
                     <span className="font-number">
-                      {item.chg.toFixed(2) * 100}%
+                      {(item.chg * 100).toFixed(2)}%
                     </span>
                   </div>
                 </div>
