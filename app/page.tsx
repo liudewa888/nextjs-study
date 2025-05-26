@@ -1,8 +1,12 @@
-import Chat from "./chat";
+// import "../public/assets/css/global.css";
+// import "../public/assets/css/index.css";
 import "../public/assets/css/base.css";
 import "../public/assets/css/style.css";
 import "../public/assets/css/web.css";
-import '../public/assets/css/font-awesome.css'
+import "../public/assets/css/font-awesome.css";
+
+
+import Chat from "./chat";
 
 export default function Home() {
   return (

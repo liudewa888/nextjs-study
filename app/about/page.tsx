@@ -4,7 +4,7 @@ export default function About() {
       <h1 className="page-title" style={{ fontWeight: 600, fontSize: "24px" }}>
         深圳周喜珠宝产业服务有限公司
       </h1>
-      <div className="markdown">
+      <div className="markdown" style={{ fontSize: "18px" }}>
         <p className="leading-[2.5]">
           公司成立于 2018 年，总部位于深圳，以 “艺术美学与产业创新融合”
           为核心理念，专注珠宝全产业链服务，致力于成为全球珠宝消费与文化传播的价值桥梁。
