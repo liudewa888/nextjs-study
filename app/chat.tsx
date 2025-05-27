@@ -314,36 +314,6 @@ export default function Home() {
       title:
         "英伟达在华市场份额大跌45%！黄仁勋最新专访 呼吁美国政府重新审视对华出口管制",
     },
-    {
-      imgUrl: null,
-      author: "中国经营报",
-      ctime: 1748257938,
-      id: 39226,
-      title: "视频疯传！余承东开车睡觉？最新回应",
-    },
-    {
-      imgUrl: null,
-      author: "新华网",
-      ctime: 1748257417,
-      id: 39227,
-      title: "国务院、中央军委公布实施《重要军工设施保护条例》",
-    },
-    {
-      imgUrl:
-        "https://cheesestock.oss-cn-qingdao.aliyuncs.com/cheese/news/2025-05-26/D24759981447671767081_w210h154.jpg",
-      author: "数据宝",
-      ctime: 1748257037,
-      id: 39228,
-      title: "重组题材持续火爆！小市值国资重组潜力股出炉",
-    },
-    {
-      imgUrl: null,
-      author: "每日经济新闻",
-      ctime: 1748256967,
-      id: 39234,
-      title:
-        "结婚就发钱！韩国人结婚奖励至多2000万韩元 还能报销约会经费、蜜月旅行支出等",
-    },
   ];
 
   function getM(timestamp: any) {
@@ -359,63 +329,14 @@ export default function Home() {
 
   return (
     <div className="pcHtml">
-      <div className="layout pdt15px pdb15px">
-        <div className="flex-heng w100 flex-align-center">
-          {/* <a href="#" className="h70px mgr50px">
-            <img src="/assets/images/6387574154819607883399431.gif" className="h70px" />
-          </a> */}
-          <div className="flex-grow-1 pdt10px flex-heng fs20 h40px fsb a_color_4d4d4d">
-            <a className="navli navli_0" href="#">
-              首页
-            </a>
-
-            <div className="flex-grow-1 navkg">|</div>
-            <a className="navli navli_7" href="#">
-              行情资讯
-            </a>
-
-            <div className="flex-grow-1 navkg">|</div>
-            <a className="navli navli_9" href="#">
-              深度解析
-            </a>
-
-            <div className="flex-grow-1 navkg">|</div>
-            <a className="navli navli_10" href="#">
-              早盘播报
-            </a>
-
-            <div className="flex-grow-1 navkg">|</div>
-            <a className="navli navli_11" href="#">
-              期权研究
-            </a>
-          </div>
+      <div className="mx-auto w-full overflow-auto mt-5">
+        <div className="w-full h-full transition-all duration-500 opacity-100 mb-5">
+          <img
+            src="/assets/images/ad1.jpg"
+            alt="Image 0"
+            className="w-full h-full object-contain rounded-xl"
+          />
         </div>
-      </div>
-      <div className="layout psr h42px">
-        <div className="w100 navLine h42px bg_004588 fs17px flex-heng flex-align-center tac fsb">
-          <a className="item iarrow item_a17 flex-grow-1" href="#">
-            每日早盘
-          </a>
-
-          <a className="item iarrow item_a18 flex-grow-1" href="#">
-            深度分析
-          </a>
-
-          <a className="item iarrow item_a22 flex-grow-1" href="#">
-            最新动态
-          </a>
-
-          <a className="item iarrow item_a24 flex-grow-1" href="#">
-            合作伙伴
-          </a>
-        </div>
-        <div className="w100 navLin_emore h42px bg_004588_95 fs17px tac a_color_fff a_hv_color_EF9524 a_color_jb fsb">
-          <div className="w100 flex-heng flex-align-center">
-            <a className="flex-grow-1"></a>
-          </div>
-        </div>
-      </div>
-      <div className="mx-auto max-w-7xl w-full px-8 overflow-auto mt-5">
         <ul className="grid grid-cols-6 gap-4">
           {listData.map((item, index) => {
             return (
@@ -445,8 +366,435 @@ export default function Home() {
             );
           })}
         </ul>
+        <div className="text-xs">
+          <div className=" maPaiban mgt20px psr indexPb">
+            <div className="nrContent">
+              <div className="w100 boxsz paiban_4 ">
+                <div className="item">
+                  <a href="article" target="_blank" className="aimg">
+                    <img
+                      src="/assets/images/6388350616212510747966261.jpeg"
+                      className="flexImg_cover"
+                    />
+                  </a>
+                  <a href="article" target="_blank" className="abtn br50">
+                    &nbsp;
+                  </a>
+                </div>
+
+                <div className="item">
+                  <a href="article" target="_blank" className="aimg">
+                    <img
+                      src="/assets/images/6388350627800882532495041.jpeg"
+                      className="flexImg_cover"
+                    />
+                  </a>
+                  <a href="article" target="_blank" className="abtn br50">
+                    &nbsp;
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="nrContent">
+              <div className="w100 boxsz paiban_3 ">
+                <div className="item">
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="AT&T斥57.5亿美元收购Lumen旗下零售光纤业务"
+                  >
+                    AT&T斥57.5亿美元收购Lumen旗下零售光...
+                  </a>
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="articleinfo"
+                    title="AT&T斥57.5亿美元收购Lumen旗下零售光纤业务"
+                  >
+                    <span>30分钟前</span>
+                  </a>
+                </div>
+                <div className="item">
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="算法推荐乱象凸显 中央网信办督导抖音、小红书等平台优化调整"
+                  >
+                    算法推荐乱象凸显 中央网信办督导抖音、小红书等平...
+                  </a>
+
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="格隆汇快讯"
+                  >
+                    格隆汇快讯
+                  </a>
+
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="格隆汇快讯"
+                  >
+                    格隆汇快讯
+                  </a>
+
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="格隆汇快讯"
+                  >
+                    格隆汇快讯
+                  </a>
+
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="新湖期货：美豆及连粕反弹仍可能持续 等待阿根廷产量损失明朗"
+                  >
+                    新湖期货：美豆及连粕反弹仍可能持续 等待阿根廷产...
+                  </a>
+                </div>
+                <div className="item">
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="格隆汇快讯"
+                  >
+                    格隆汇快讯
+                  </a>
+                  <a href="article" target="_blank" className="articleinfo">
+                    <span>30分钟前</span>
+                  </a>
+                </div>
+                <div className="item">
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="加拿大最大退休基金增加对美资产配置 比重增至47%"
+                  >
+                    加拿大最大退休基金增加对美资产配置 比重增至47...
+                  </a>
+
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="A股宠物经济概念股集体回调：源飞宠物跌超6%，路斯股份跌超4%"
+                  >
+                    A股宠物经济概念股集体回调：源飞宠物跌超6%，路...
+                  </a>
+
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="金砖国家第十五次经贸部长会议在巴西首都巴西利亚举行"
+                  >
+                    金砖国家第十五次经贸部长会议在巴西首都巴西利亚举...
+                  </a>
+
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="格隆汇快讯"
+                  >
+                    格隆汇快讯
+                  </a>
+
+                  <a
+                    href="article"
+                    target="_blank"
+                    className="atitle cljb"
+                    title="格隆汇快讯"
+                  >
+                    格隆汇快讯
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              className="nrContent"
+              style={{ width: "32rem", height: "26rem" }}
+            >
+              <a href="article" target="_blank" className="aimg">
+                <img
+                  src="/assets/images/6388350627800882532495041.jpeg"
+                  className="flexImg_cover"
+                />
+              </a>
+            </div>
+          </div>
+          <div className="w-full h-full transition-all duration-500 opacity-100">
+            <img
+              src="/assets/images/ad2.jpg"
+              alt="Image 0"
+              className="w-full h-full object-contain rounded-xl"
+            />
+          </div>
+          <div className="indexpb nrPaiban psr">
+            <div className="nrContent">
+              <div className="w100 boxsz paiban_6">
+                <div className="lmitem">
+                  <a href="article" target="_blank" className="lmtitle">
+                    行情资讯
+                  </a>
+                </div>
+                <div className="w100 boxsz">
+                  <div className="item">
+                    <a href="article" target="_blank" className="aimg">
+                      <img
+                        src="/assets/images/6388350616212510747966261.jpeg"
+                        className="flexImg_cover"
+                      />
+                    </a>
+                    <a
+                      href="article"
+                      target="_blank"
+                      className="atitle cljb"
+                      title=""
+                    >
+                      <i>A股异动</i>
+                      A股异动丨金价重新走强，莱绅通灵涨超6%，萃华珠宝涨超4%
+                    </a>
+                    <a href="article" target="_blank" className="articleinfo">
+                      <span>A股异动</span> <span>47分钟前</span>
+                    </a>
+                    <a href="article" target="_blank" className="axh">
+                      &nbsp;
+                    </a>
+                  </div>
+                  <div className="item">
+                    <a href="article" target="_blank" className="aimg">
+                      <img
+                        src="/assets/images/6388350616212510747966261.jpeg"
+                        className="flexImg_cover"
+                      />
+                    </a>
+                    <a
+                      href="article"
+                      target="_blank"
+                      className="atitle cljb"
+                      title=""
+                    >
+                      <i>A股异动</i>
+                      A股异动丨金价重新走强，莱绅通灵涨超6%，萃华珠宝涨超4%
+                    </a>
+                    <a href="article" target="_blank" className="articleinfo">
+                      <span>A股异动</span> <span>47分钟前</span>
+                    </a>
+                    <a href="article" target="_blank" className="axh">
+                      &nbsp;
+                    </a>
+                  </div>
+                  <div className="item">
+                    <a href="article" target="_blank" className="aimg">
+                      <img
+                        src="/assets/images/6388350616212510747966261.jpeg"
+                        className="flexImg_cover"
+                      />
+                    </a>
+                    <a
+                      href="article"
+                      target="_blank"
+                      className="atitle cljb"
+                      title=""
+                    >
+                      <i>A股异动</i>
+                      A股异动丨金价重新走强，莱绅通灵涨超6%，萃华珠宝涨超4%
+                    </a>
+                    <a href="article" target="_blank" className="articleinfo">
+                      <span>A股异动</span> <span>47分钟前</span>
+                    </a>
+                    <a href="article" target="_blank" className="axh">
+                      &nbsp;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="nrContent">
+              <div className="w100 boxsz paiban_6">
+                <div className="lmitem">
+                  <a href="article" target="_blank" className="lmtitle">
+                    早盘播报
+                  </a>
+                </div>
+                <div className="w100 boxsz">
+                  <div className="item">
+                    <a href="article" target="_blank" className="aimg">
+                      <img
+                        src="/assets/images/live-cover1.jpeg"
+                        className="flexImg_cover"
+                      />
+                    </a>
+
+                    <a
+                      href="article"
+                      target="_blank"
+                      className="atitle cljb"
+                      title=""
+                    >
+                      AT&T斥57.5亿美元收购Lumen旗下零售光纤业务
+                    </a>
+                    <a href="article" target="_blank" className="articleinfo">
+                      <span>30分钟前</span>
+                    </a>
+                    <a href="article" target="_blank" className="axh">
+                      &nbsp;
+                    </a>
+                  </div>
+                </div>
+                <div className="w100 boxsz">
+                  <div className="item">
+                    <a href="article" target="_blank" className="aimg">
+                      <img
+                        src="/assets/images/live-cover1.jpeg"
+                        className="flexImg_cover"
+                      />
+                    </a>
+
+                    <a
+                      href="article"
+                      target="_blank"
+                      className="atitle cljb"
+                      title=""
+                    >
+                      AT&T斥57.5亿美元收购Lumen旗下零售光纤业务
+                    </a>
+                    <a href="article" target="_blank" className="articleinfo">
+                      <span>30分钟前</span>
+                    </a>
+                    <a href="article" target="_blank" className="axh">
+                      &nbsp;
+                    </a>
+                  </div>
+                </div>
+                <div className="w100 boxsz">
+                  <div className="item">
+                    <a href="article" target="_blank" className="aimg">
+                      <img
+                        src="/assets/images/live-cover1.jpeg"
+                        className="flexImg_cover"
+                      />
+                    </a>
+
+                    <a
+                      href="article"
+                      target="_blank"
+                      className="atitle cljb"
+                      title=""
+                    >
+                      AT&T斥57.5亿美元收购Lumen旗下零售光纤业务
+                    </a>
+                    <a href="article" target="_blank" className="articleinfo">
+                      <span>30分钟前</span>
+                    </a>
+                    <a href="article" target="_blank" className="axh">
+                      &nbsp;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="nrContent">
+              <div className="w100 boxsz paiban_6">
+                <div className="lmitem">
+                  <a href="article" target="_blank" className="lmtitle">
+                    深度解析
+                  </a>
+                </div>
+                <div className="w100 boxsz">
+                  <div className="item">
+                    <a href="article" target="_blank" className="aimg">
+                      <img
+                        src="/assets/images/6388350627800882532495041.jpeg"
+                        className="flexImg_cover"
+                      />
+                    </a>
+
+                    <a
+                      href="article"
+                      target="_blank"
+                      className="atitle cljb"
+                      title=""
+                    >
+                      <i>推荐</i>
+                      誓要打造全新AI硬件！OpenAI斥资65亿美元，拿下初创公司io
+                    </a>
+                    <a href="article" target="_blank" className="articleinfo">
+                      <span>推荐</span> <span>1小时前</span>
+                    </a>
+                    <a href="article" target="_blank" className="axh">
+                      &nbsp;
+                    </a>
+                  </div>
+                  <div className="item">
+                    <a href="article" target="_blank" className="aimg">
+                      <img
+                        src="/assets/images/6388350627800882532495041.jpeg"
+                        className="flexImg_cover"
+                      />
+                    </a>
+
+                    <a
+                      href="article"
+                      target="_blank"
+                      className="atitle cljb"
+                      title=""
+                    >
+                      <i>推荐</i>
+                      誓要打造全新AI硬件！OpenAI斥资65亿美元，拿下初创公司io
+                    </a>
+                    <a href="article" target="_blank" className="articleinfo">
+                      <span>推荐</span> <span>1小时前</span>
+                    </a>
+                    <a href="article" target="_blank" className="axh">
+                      &nbsp;
+                    </a>
+                  </div>
+                  <div className="item">
+                    <a href="article" target="_blank" className="aimg">
+                      <img
+                        src="/assets/images/6388350627800882532495041.jpeg"
+                        className="flexImg_cover"
+                      />
+                    </a>
+
+                    <a
+                      href="article"
+                      target="_blank"
+                      className="atitle cljb"
+                      title=""
+                    >
+                      <i>推荐</i>
+                      誓要打造全新AI硬件！OpenAI斥资65亿美元，拿下初创公司io
+                    </a>
+                    <a href="article" target="_blank" className="articleinfo">
+                      <span>推荐</span> <span>1小时前</span>
+                    </a>
+                    <a href="article" target="_blank" className="axh">
+                      &nbsp;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div>
-          <h1 className="text-2xl font-bold text-slate-700 my-8">今日看点</h1>
+          <h1 className="text-[1.6rem] font-bold text-slate-700 my-8">
+            今日看点
+          </h1>
           <ul className="flex flex-col justify-start gap-8">
             {newsData.map((item, index) => {
               return (
@@ -476,7 +824,7 @@ export default function Home() {
         </div>
       </div>
       <div className="mgt20px bg_222222">
-        <div className="layout pdt20px pdb20px flex-heng flex justify-center">
+        <div className=" pdt20px pdb20px flex-heng flex justify-center">
           <div className="flex-grow-0">
             <div className="w100 a_color_5f5f6a color_5f5f6a a_hv_color_cbcbcb a_color_jb">
               <Link href="/about" target="_blank">
