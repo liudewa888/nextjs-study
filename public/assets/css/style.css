@@ -956,7 +956,7 @@ a.navatc::before {
   display: block;
   font-size: 1.2rem;
   color: #333;
-  width: 18rem;
+  width: 16.8rem;
   height: 4rem;
   line-height: 1.2rem;
   position: absolute;
@@ -2137,4 +2137,9 @@ a.navatc::before {
 .ggwcircle .li.atc {
   background: #37f;
   border: 1px #37f solid;
+}
+
+.quick {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
 }
