@@ -47,7 +47,7 @@ export default function Home() {
       </h1>
       <p className="text-base space-x-2">
         <span>{news.origin}</span>
-        <span>今天</span>
+        <span>今日</span>
         <span>{getM(news.time)}</span>
       </p>
       <div className="text-base text-neutral-500 py-2">

@@ -241,7 +241,7 @@ export default function Home() {
                       <div>
                         <p>{item.author}</p>
                         <div className="space-x-1">
-                          <span>今天</span>
+                          <span>今日</span>
                           <span>{getM(item.ctime)}</span>
                         </div>
                       </div>
