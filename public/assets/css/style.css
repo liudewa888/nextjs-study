@@ -466,25 +466,23 @@ a.navatc::before {
 
 /*排版*/
 .maPaiban {
-  position: relative;
   height: 26.8rem;
 }
 .maPaiban .nrContent {
   width: 30rem;
   /* height: 20.5rem; */
-  position: absolute;
-  top: 0;
+  /* position: absolute;
+  top: 0; */
 }
 .nrPaiban {
-  position: relative;
   height: 26rem;
 }
 .nrPaiban .nrContent {
   width: 30rem;
   /* height: 31.5rem; */
   border-bottom: 1px #ddd solid;
-  position: absolute;
-  top: 0;
+  /* position: absolute;
+  top: 0; */
 }
 
 .nrContent:nth-child(1) {

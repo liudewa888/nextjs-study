@@ -4,6 +4,16 @@ import Link from "next/link";
 export default function Home() {
   const [data, setData] = useState(null);
   const [data1, setData1] = useState(null);
+  const [config, setConfig] = useState(null);
+
+  useEffect(() => {
+    fetch('/config.json')
+      .then((response) => response.json())
+      .then((data) => setConfig(data))
+      .catch((error) => console.error('Error loading config.json:', error));
+  }, []);
+
+
   useEffect(() => {
     fetch("/api/indicator")
       .then((res) => res.json())
@@ -19,6 +29,7 @@ export default function Home() {
   }
 
   const columns = ["行情资讯", "早盘播报", "深度解析"];
+   const showElement = config.adShow
 
   const listData = data.datas;
 
@@ -37,13 +48,15 @@ export default function Home() {
   return (
     <div className="pcHtml">
       <div className="mx-auto w-full overflow-auto mt-5">
-        <div className="w-full h-full transition-all duration-500 opacity-100 mb-5">
-          <img
-            src="/assets/images/ad1.jpg"
-            alt="Image 0"
-            className="w-full h-full object-contain rounded-xl"
-          />
-        </div>
+        {showElement && (
+          <div className="w-full h-full transition-all duration-500 opacity-100 mb-5">
+            <img
+              src="/assets/images/ad1.jpg"
+              alt="Image 0"
+              className="w-full h-full object-contain rounded-xl"
+            />
+          </div>
+        )}
         <ul className="grid grid-cols-6 gap-4">
           {listData.map((item, index) => {
             return (
@@ -74,7 +87,7 @@ export default function Home() {
           })}
         </ul>
         <div className="text-xs">
-          <div className=" maPaiban mgt20px psr indexPb">
+          <div className=" maPaiban mgt20px indexPb flex justify-between">
             <div className="nrContent">
               <div className="w100 boxsz paiban_4 ">
                 <div className="item">
@@ -147,14 +160,16 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="w-full h-full transition-all duration-500 opacity-100">
-            <img
-              src="/assets/images/ad2.jpg"
-              alt="Image 0"
-              className="w-full h-full object-contain rounded-xl"
-            />
-          </div>
-          <div className="indexpb nrPaiban psr">
+          {showElement && (
+            <div className="w-full h-full transition-all duration-500 opacity-100">
+              <img
+                src="/assets/images/ad2.jpg"
+                alt="Image 0"
+                className="w-full h-full object-contain rounded-xl"
+              />
+            </div>
+          )}
+          <div className="indexpb nrPaiban flex justify-between">
             {columns.map((item, index) => {
               return (
                 <div className="nrContent" key={"column-" + index}>
@@ -181,7 +196,7 @@ export default function Home() {
                                 />
                               </a>
                               <a
-                                href="article"
+                                href={"/article/" + item.id}
                                 target="_blank"
                                 className="atitle cljb"
                                 title=""
@@ -189,15 +204,12 @@ export default function Home() {
                                 {item.title}
                               </a>
                               <a
-                                href="article"
+                                href={"/article/" + item.id}
                                 target="_blank"
                                 className="articleinfo"
                               >
                                 <span>{item.author}</span>{" "}
                                 <span>{getM(item.ctime)}</span>
-                              </a>
-                              <a href="article" target="_blank" className="axh">
-                                &nbsp;
                               </a>
                             </div>
                           );
