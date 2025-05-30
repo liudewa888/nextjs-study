@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "深圳周喜珠宝产业服务有限公司",
-  description: "深圳周喜珠宝产业服务有限公司",
+  title: "周喜财经",
+  description: "周喜财经",
 };
 
 export default function RootLayout({
