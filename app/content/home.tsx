@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   if (!data || !data1) {
-    return <></>;
+    return <p>Loading...</p>;
   }
 
   const columns = ["行情资讯", "早盘播报", "深度解析"];
@@ -149,11 +149,11 @@ export default function Home() {
           </div>
         </div>
         {showElement && (
-          <div className="w-full h-full transition-all duration-500 opacity-100">
+          <div className="w-full h-36 transition-all duration-500 opacity-100">
             <img
               src="/assets/images/ad2.jpg"
               alt="Image 0"
-              className="w-full h-full object-contain rounded-xl"
+              className="w-full object-contain rounded-xl"
             />
           </div>
         )}

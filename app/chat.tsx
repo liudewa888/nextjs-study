@@ -74,11 +74,11 @@ export default function Index() {
           </ul>
         </div>
         {showElement && (
-          <div className="w-full h-full transition-all duration-500 opacity-100 mb-5">
+          <div className="w-full h-36 transition-all duration-500 opacity-100 mb-5 overflow-hidden">
             <img
               src="/assets/images/ad1.jpg"
               alt="Image 0"
-              className="w-full h-full object-contain rounded-xl"
+              className="w-full object-contain rounded-xl"
             />
           </div>
         )}
