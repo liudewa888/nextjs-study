@@ -13,11 +13,15 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    fetch("/api/indicator")
+    fetch("/api/indicator", {
+      cache: "no-store",
+    })
       .then((res) => res.json())
       .then((data) => setData(data));
 
-    fetch("/api/news")
+    fetch("/api/news", {
+      cache: "no-store",
+    })
       .then((res) => res.json())
       .then((data) => setData1(data));
   }, []);

@@ -23,9 +23,11 @@ export default function Home() {
 
   function tabClick(val) {
     setTabIndex(val);
-    fetch("/api/indicatorView?type=" + val)
+    fetch("/api/indicatorView?type=" + val, {
+      cache: "no-store",
+    })
       .then((res) => res.json())
-      .then((data) => setDatas(data.datas.slice(0,80)));
+      .then((data) => setDatas(data.datas.slice(0, 80)));
   }
   useEffect(() => {
     tabClick(1);

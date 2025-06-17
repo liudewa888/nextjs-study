@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [data, setData] = useState(null);
   useEffect(() => {
-    fetch("/api/twoFour")
+    fetch("/api/twoFour", {
+      cache: "no-store",
+    })
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

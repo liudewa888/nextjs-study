@@ -16,7 +16,7 @@ function getM(timestamp: any) {
 function calculateNaturalViews(publishDate: any) {
   const daysPublished =
     (new Date() - new Date(publishDate)) / (1000 * 60 * 60 * 24);
-  return Math.floor(100 * Math.log(daysPublished + 1) + 50 * Math.random());
+  return Math.floor(2000 * Math.log(daysPublished + 1) + 5000 * Math.random());
 }
 
 export default function Home() {
