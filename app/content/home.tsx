@@ -49,6 +49,15 @@ export default function Home() {
 
   return (
     <>
+      {showElement && (
+        <div className="w-full h-36 transition-all duration-500 opacity-100 mb-5 overflow-hidden">
+          <img
+            src="/assets/images/ad1.jpg"
+            alt="Image 0"
+            className="w-full object-contain rounded-xl"
+          />
+        </div>
+      )}
       <ul className="grid grid-cols-6 gap-4">
         {listData.map((item, index) => {
           return (
@@ -155,7 +164,7 @@ export default function Home() {
         {showElement && (
           <div className="w-full h-36 transition-all duration-500 opacity-100 overflow-hidden">
             <img
-              src="/assets/images/ad2.jpg"
+              src="/assets/images/ad1.jpg"
               alt="Image 0"
               className="w-full object-contain rounded-xl"
             />

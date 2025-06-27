@@ -2,6 +2,13 @@
 import { useEffect, useState } from "react";
 export default function Home() {
   const [data, setData] = useState(null);
+  const [config, setConfig] = useState(null);
+  useEffect(() => {
+    fetch("/config.json")
+      .then((response) => response.json())
+      .then((data) => setConfig(data))
+      .catch((error) => console.error("Error loading config.json:", error));
+  }, []);
   useEffect(() => {
     fetch("/api/twoFour", {
       cache: "no-store",
@@ -9,6 +16,9 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
+  if (!config) return;
+  const showElement = config.adShow;
+
   if (!data) {
     return <p>Loading...</p>;
   }
@@ -26,6 +36,15 @@ export default function Home() {
   }
   return (
     <div className="flex-auto pl-2 pt-4 overflow-auto scroll-smooth">
+      {showElement && (
+        <div className="w-full h-36 transition-all duration-500 opacity-100 mb-5 overflow-hidden">
+          <img
+            src="/assets/images/ad2.jpg"
+            alt="Image 0"
+            className="w-full object-contain rounded-xl"
+          />
+        </div>
+      )}
       <ul className="flex flex-col justify-start">
         {datas.map((item, index) => {
           return (

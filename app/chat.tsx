@@ -7,19 +7,7 @@ import TwoFour from "./content/twoFour";
 import Indicator from "./content/indicator";
 
 export default function Index() {
-  const [config, setConfig] = useState(null);
   const [tabIndex, setTabIndex] = useState(0);
-  useEffect(() => {
-    fetch("/config.json")
-      .then((response) => response.json())
-      .then((data) => setConfig(data))
-      .catch((error) => console.error("Error loading config.json:", error));
-  }, []);
-
-  if (!config) return;
-
-  const showElement = config.adShow;
-
   const tabs = ["首页", "7x24", "指数看板"];
 
   function tabClick(val) {
@@ -73,15 +61,6 @@ export default function Index() {
             })}
           </ul>
         </div>
-        {showElement && (
-          <div className="w-full h-36 transition-all duration-500 opacity-100 mb-5 overflow-hidden">
-            <img
-              src="/assets/images/ad1.jpg"
-              alt="Image 0"
-              className="w-full object-contain rounded-xl"
-            />
-          </div>
-        )}
       </div>
       {currentComponent}
       <div className="mgt20px bg_222222">
