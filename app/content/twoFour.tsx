@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <div className="flex-auto pl-2 pt-4 overflow-auto scroll-smooth">
       {showElement && (
-        <div className="w-full h-36 transition-all duration-500 opacity-100 mb-5 overflow-hidden">
+        <div className="w-full transition-all duration-500 opacity-100 mb-5 overflow-hidden">
           <img
             src="/assets/images/ad2.jpg"
             alt="Image 0"

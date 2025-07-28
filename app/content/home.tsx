@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <>
       {showElement && (
-        <div className="w-full h-36 transition-all duration-500 opacity-100 mb-5 overflow-hidden">
+        <div className="w-full transition-all duration-500 opacity-100 mb-5 overflow-hidden">
           <img
             src="/assets/images/ad1.jpg"
             alt="Image 0"
@@ -162,7 +162,7 @@ export default function Home() {
           </div>
         </div>
         {showElement && (
-          <div className="w-full h-36 transition-all duration-500 opacity-100 overflow-hidden">
+          <div className="w-full transition-all duration-500 opacity-100 overflow-hidden">
             <img
               src="/assets/images/ad1.jpg"
               alt="Image 0"
